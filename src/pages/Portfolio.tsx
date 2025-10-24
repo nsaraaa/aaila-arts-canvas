@@ -44,26 +44,29 @@ const Portfolio = () => {
   ];
 
   return (
-    <div className="min-h-screen pt-28 pb-20">
+    <div className="min-h-screen pt-28 pb-20 artistic-section">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16 fade-in-up">
-          <h1 className="text-5xl sm:text-6xl font-heading font-bold mb-6 text-arts-dark-blue">
-            Portfolio
-          </h1>
-          <p className="text-lg font-body text-arts-dark-blue/70 max-w-2xl mx-auto">
+        <div className="text-center mb-20 fade-in-up">
+          <div className="relative inline-block mb-8">
+            <h1 className="text-6xl sm:text-7xl font-heading font-bold mb-6 artistic-text creative-text-shadow">
+              Portfolio
+            </h1>
+            <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-40 h-1 bg-gradient-to-r from-arts-light-blue via-arts-pink to-arts-green rounded-full"></div>
+          </div>
+          <p className="text-xl font-body text-arts-dark-blue/70 max-w-3xl mx-auto leading-relaxed">
             A collection of my visual art and handcrafted pieces, each telling its own story
-            through color, texture, and form.
+            through color, texture, and form. Every piece is a journey of creative expression.
           </p>
         </div>
 
         {/* Gallery Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="creative-grid">
           {artworks.map((artwork, index) => (
             <div 
               key={index} 
-              className="fade-in-up" 
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className="fade-in-up artistic-hover" 
+              style={{ animationDelay: `${index * 0.15}s` }}
             >
               <ArtworkCard {...artwork} />
             </div>

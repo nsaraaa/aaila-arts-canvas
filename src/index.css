@@ -199,6 +199,152 @@ All colors MUST be HSL.
   .border-arts-green {
     border-color: #687554;
   }
+  
+  /* Creative Artistic Utilities */
+  .artistic-brush-stroke {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .artistic-brush-stroke::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent 30%, rgba(90, 127, 159, 0.1) 50%, transparent 70%);
+    animation: brushStroke 8s ease-in-out infinite;
+    pointer-events: none;
+  }
+  
+  .floating-shape {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.1;
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .floating-shape:nth-child(1) {
+    width: 80px;
+    height: 80px;
+    background: #5A7F9F;
+    top: 20%;
+    left: 10%;
+    animation-delay: 0s;
+  }
+  
+  .floating-shape:nth-child(2) {
+    width: 120px;
+    height: 120px;
+    background: #A46858;
+    top: 60%;
+    right: 15%;
+    animation-delay: 2s;
+  }
+  
+  .floating-shape:nth-child(3) {
+    width: 60px;
+    height: 60px;
+    background: #687554;
+    bottom: 30%;
+    left: 20%;
+    animation-delay: 4s;
+  }
+  
+  .creative-text-shadow {
+    text-shadow: 2px 2px 4px rgba(22, 36, 64, 0.3);
+  }
+  
+  .artistic-border {
+    border: 3px solid transparent;
+    background: linear-gradient(white, white) padding-box,
+                linear-gradient(45deg, #5A7F9F, #A46858, #687554) border-box;
+  }
+  
+  .creative-card {
+    background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(90,127,159,0.05) 100%);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(90,127,159,0.2);
+    box-shadow: 0 8px 32px rgba(22,36,64,0.1);
+  }
+  
+  .artistic-hover {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .artistic-hover:hover {
+    transform: translateY(-8px) rotate(1deg);
+    box-shadow: 0 20px 40px rgba(22,36,64,0.15);
+  }
+  
+  .creative-button {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #5A7F9F, #A46858);
+    border: none;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+  }
+  
+  .creative-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
+  }
+  
+  .creative-button:hover::before {
+    left: 100%;
+  }
+  
+  .creative-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(90,127,159,0.3);
+  }
+  
+  .artistic-section {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .artistic-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%235A7F9F' fill-opacity='0.03'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    pointer-events: none;
+  }
+  
+  .creative-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    align-items: start;
+  }
+  
+  .artistic-text {
+    background: linear-gradient(135deg, #5A7F9F, #A46858);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+  }
+  
+  .creative-parallax {
+    transform: translateZ(0);
+    will-change: transform;
+  }
 }
 
 @keyframes fadeIn {
@@ -218,5 +364,46 @@ All colors MUST be HSL.
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes brushStroke {
+  0%, 100% {
+    transform: translateX(-100%) translateY(-100%) rotate(0deg);
+  }
+  50% {
+    transform: translateX(100%) translateY(100%) rotate(180deg);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  33% {
+    transform: translateY(-20px) rotate(120deg);
+  }
+  66% {
+    transform: translateY(10px) rotate(240deg);
+  }
+}
+
+@keyframes creativePulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+}
+
+@keyframes artisticGlow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(90, 127, 159, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(164, 104, 88, 0.5);
   }
 }

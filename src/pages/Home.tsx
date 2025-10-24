@@ -32,46 +32,79 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center artistic-gradient">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <section className="relative min-h-[100vh] flex items-center artistic-section overflow-hidden">
+        {/* Floating Shapes */}
+        <div className="floating-shape"></div>
+        <div className="floating-shape"></div>
+        <div className="floating-shape"></div>
+        
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Hero Content */}
-            <div className="fade-in-up">
-              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-heading font-bold mb-6 leading-tight">
-                Hi, I'm{" "}
-                <span className="text-arts-light-blue">Aaila Zahra</span>
-              </h1>
-              <p className="text-xl sm:text-2xl font-heading text-arts-dark-blue mb-4">
-                Visual artist & craft creator
+            <div className="fade-in-up artistic-brush-stroke">
+              <div className="relative">
+                <h1 className="text-6xl sm:text-7xl lg:text-8xl font-heading font-bold mb-8 leading-tight">
+                  <span className="block">Hi, I'm</span>
+                  <span className="artistic-text creative-text-shadow">Aaila Zahra</span>
+                </h1>
+                <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-arts-pink to-arts-light-blue rounded-full opacity-20 animate-pulse"></div>
+              </div>
+              
+              <p className="text-2xl sm:text-3xl font-heading text-arts-dark-blue mb-6 relative">
+                <span className="inline-block transform -rotate-2">Visual artist</span>
+                <span className="mx-4 text-arts-pink">&</span>
+                <span className="inline-block transform rotate-1">craft creator</span>
               </p>
-              <p className="text-lg font-body text-arts-dark-blue/80 mb-8 max-w-xl">
+              
+              <p className="text-xl font-body text-arts-dark-blue/80 mb-10 max-w-xl leading-relaxed">
                 Color, texture, and emotion in every piece. Explore my journey through
-                visual art and handcrafted creations.
+                visual art and handcrafted creations that tell stories beyond words.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
+              
+              <div className="flex flex-col sm:flex-row gap-6">
                 <Link to="/portfolio">
-                  <Button size="lg" className="group font-body bg-arts-light-blue hover:bg-arts-light-blue/90 text-white">
+                  <button className="creative-button px-8 py-4 rounded-full text-lg font-semibold">
                     View Portfolio
-                    <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
-                  </Button>
+                    <ArrowRight className="ml-3 inline-block group-hover:translate-x-1 transition-transform" size={20} />
+                  </button>
                 </Link>
                 <Link to="/contact">
-                  <Button size="lg" variant="outline" className="font-body border-arts-pink text-arts-pink hover:bg-arts-pink hover:text-white">
+                  <button className="px-8 py-4 rounded-full text-lg font-semibold border-2 border-arts-pink text-arts-pink hover:bg-arts-pink hover:text-white transition-all duration-300 transform hover:-translate-y-1">
                     Get in Touch
-                  </Button>
+                  </button>
                 </Link>
               </div>
             </div>
 
             {/* Hero Image */}
-            <div className="fade-in">
-              <div className="relative">
-                <div className="absolute -inset-4 gradient-pink-blue rounded-3xl blur-2xl opacity-30" />
-                <img
-                  src={heroArtwork}
-                  alt="Featured artwork"
-                  className="relative rounded-3xl shadow-2xl w-full border-4 border-arts-light-blue/20"
-                />
+            <div className="fade-in relative">
+              <div className="relative group">
+                {/* Creative Frame */}
+                <div className="absolute -inset-8 gradient-artistic rounded-[3rem] blur-3xl opacity-40 group-hover:opacity-60 transition-opacity duration-500"></div>
+                
+                {/* Artistic Border */}
+                <div className="absolute -inset-4 artistic-border rounded-3xl"></div>
+                
+                {/* Main Image */}
+                <div className="relative overflow-hidden rounded-3xl">
+                  <img
+                    src={heroArtwork}
+                    alt="Featured artwork"
+                    className="w-full h-[600px] object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  
+                  {/* Overlay Effects */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-arts-dark-blue/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  
+                  {/* Floating Elements */}
+                  <div className="absolute top-6 right-6 w-16 h-16 bg-white/90 rounded-full flex items-center justify-center transform rotate-12 group-hover:rotate-45 transition-transform duration-500">
+                    <span className="text-arts-light-blue font-bold text-xl">✨</span>
+                  </div>
+                  
+                  <div className="absolute bottom-6 left-6 w-12 h-12 bg-arts-pink/90 rounded-full flex items-center justify-center transform -rotate-12 group-hover:rotate-12 transition-transform duration-500">
+                    <span className="text-white font-bold text-lg">🎨</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -79,51 +112,84 @@ const Home = () => {
       </section>
 
       {/* Featured Works Section */}
-      <section className="py-20 bg-background">
+      <section className="py-24 artistic-section relative">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 fade-in-up">
-            <h2 className="text-4xl sm:text-5xl font-heading font-bold mb-4 text-arts-dark-blue">
-              Featured Works
-            </h2>
-            <p className="text-lg font-body text-arts-dark-blue/70 max-w-2xl mx-auto">
-              A selection of recent pieces showcasing my artistic exploration
+          <div className="text-center mb-16 fade-in-up">
+            <div className="relative inline-block">
+              <h2 className="text-5xl sm:text-6xl font-heading font-bold mb-6 artistic-text creative-text-shadow">
+                Featured Works
+              </h2>
+              <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-arts-light-blue to-arts-pink rounded-full"></div>
+            </div>
+            <p className="text-xl font-body text-arts-dark-blue/70 max-w-3xl mx-auto leading-relaxed">
+              A curated selection of recent pieces showcasing my artistic exploration
+              through color, texture, and creative expression
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="creative-grid">
             {featuredWorks.map((work, index) => (
-              <div key={index} className="fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
+              <div 
+                key={index} 
+                className="fade-in-up artistic-hover" 
+                style={{ animationDelay: `${index * 0.2}s` }}
+              >
                 <ArtworkCard {...work} />
               </div>
             ))}
           </div>
 
-          <div className="text-center mt-12">
+          <div className="text-center mt-16">
             <Link to="/portfolio">
-              <Button size="lg" variant="outline" className="group font-body border-arts-green text-arts-green hover:bg-arts-green hover:text-white">
-                View All Artworks
-                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
-              </Button>
+              <button className="creative-button px-10 py-4 rounded-full text-lg font-semibold">
+                Explore All Artworks
+                <ArrowRight className="ml-3 inline-block group-hover:translate-x-1 transition-transform" size={20} />
+              </button>
             </Link>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 gradient-artistic">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="max-w-3xl mx-auto fade-in-up">
-            <h2 className="text-4xl sm:text-5xl font-heading font-bold mb-6 text-white">
-              Let's Create Together
-            </h2>
-            <p className="text-lg font-body text-white/90 mb-8">
-              Interested in a custom piece or collaboration? I'd love to hear about your vision.
+      <section className="py-24 gradient-artistic relative overflow-hidden">
+        {/* Creative Background Elements */}
+        <div className="absolute top-10 left-10 w-32 h-32 bg-white/10 rounded-full blur-xl"></div>
+        <div className="absolute bottom-10 right-10 w-40 h-40 bg-white/10 rounded-full blur-xl"></div>
+        <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-white/5 rounded-full blur-lg"></div>
+        
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+          <div className="max-w-4xl mx-auto fade-in-up">
+            <div className="relative inline-block mb-8">
+              <h2 className="text-5xl sm:text-6xl font-heading font-bold mb-6 text-white creative-text-shadow">
+                Let's Create Together
+              </h2>
+              <div className="absolute -top-4 -right-4 w-20 h-20 bg-white/20 rounded-full animate-pulse"></div>
+            </div>
+            
+            <p className="text-xl font-body text-white/90 mb-12 max-w-2xl mx-auto leading-relaxed">
+              Interested in a custom piece or collaboration? I'd love to hear about your vision
+              and bring your artistic dreams to life through color, texture, and creative expression.
             </p>
-            <Link to="/contact">
-              <Button size="lg" className="font-body bg-white text-arts-dark-blue hover:bg-white/90">
-                Start a Conversation
-              </Button>
-            </Link>
+            
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+              <Link to="/contact">
+                <button className="px-12 py-5 rounded-full text-xl font-semibold bg-white text-arts-dark-blue hover:bg-white/90 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl">
+                  Start a Conversation
+                </button>
+              </Link>
+              
+              <div className="flex items-center gap-4 text-white/80">
+                <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
+                  <span className="text-xl">💬</span>
+                </div>
+                <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
+                  <span className="text-xl">🎨</span>
+                </div>
+                <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
+                  <span className="text-xl">✨</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
