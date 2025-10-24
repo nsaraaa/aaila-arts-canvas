@@ -1,14 +1,16 @@
 import { Card, CardContent } from "@/components/ui/card";
+import { Link } from "react-router-dom";
 
 interface ArtworkCardProps {
   image: string;
   title: string;
   medium: string;
   description: string;
+  route?: string;
 }
 
-const ArtworkCard = ({ image, title, medium, description }: ArtworkCardProps) => {
-  return (
+const ArtworkCard = ({ image, title, medium, description, route }: ArtworkCardProps) => {
+  const CardContent = (
     <div className="creative-card artistic-hover group cursor-pointer overflow-hidden rounded-3xl relative">
       {/* Creative Background Pattern */}
       <div className="absolute inset-0 opacity-5">
@@ -55,6 +57,17 @@ const ArtworkCard = ({ image, title, medium, description }: ArtworkCardProps) =>
       </div>
     </div>
   );
+
+  // If route is provided, wrap in Link, otherwise return as is
+  if (route) {
+    return (
+      <Link to={route} className="block">
+        {CardContent}
+      </Link>
+    );
+  }
+
+  return CardContent;
 };
 
 export default ArtworkCard;

@@ -10,22 +10,28 @@ import ArtworkCard from "@/components/ArtworkCard";
 const Home = () => {
   const featuredWorks = [
     {
+      id: "thesis",
       image: artwork1,
-      title: "Abstract Dreams",
-      medium: "Mixed Media on Canvas",
+      title: "Thesis Collection",
+      medium: "Mixed Media Series",
       description: "An exploration of color and texture through layered abstract forms",
+      route: "/thesis"
     },
     {
+      id: "exhibition1",
       image: artwork2,
-      title: "Woven Stories",
+      title: "Exhibition 1",
       medium: "Textile & Natural Materials",
       description: "Handcrafted piece combining traditional weaving with modern aesthetics",
+      route: "/exhibition1"
     },
     {
+      id: "exhibition2",
       image: artwork3,
-      title: "Paper Harmony",
-      medium: "Paper Collage",
+      title: "Exhibition 2",
+      medium: "Paper Collage Series",
       description: "Contemporary composition celebrating simplicity and balance",
+      route: "/exhibition2"
     },
   ];
 
