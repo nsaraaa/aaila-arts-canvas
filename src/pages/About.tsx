@@ -41,18 +41,18 @@ const About = () => {
           {/* Image */}
           <div className="fade-in relative">
             <div className="relative group">
-              <div className="absolute -inset-6 gradient-pink-blue rounded-[3rem] blur-2xl opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
-              <div className="relative aspect-[4/5] rounded-3xl bg-gradient-to-br from-arts-light-blue/10 to-arts-pink/10 overflow-hidden border-4 border-arts-light-blue/20 artistic-hover">
+              <div className="absolute -inset-6 gradient-pink-blue rounded-[3rem] blur-2xl opacity-30"></div>
+              <div className="relative aspect-[4/5] rounded-3xl bg-gradient-to-br from-arts-light-blue/10 to-arts-pink/10 overflow-hidden border-4 border-arts-light-blue/20">
                 <div className="absolute inset-0 flex items-center justify-center text-arts-dark-blue font-body text-lg">
                   Portrait Photo
                 </div>
                 
                 {/* Creative decorative elements */}
-                <div className="absolute top-6 right-6 w-16 h-16 bg-white/80 rounded-full flex items-center justify-center transform rotate-12 group-hover:rotate-45 transition-transform duration-500">
+                <div className="absolute top-6 right-6 w-16 h-16 bg-white/80 rounded-full flex items-center justify-center transform rotate-12">
                   <span className="text-arts-light-blue font-bold text-xl">🎨</span>
                 </div>
                 
-                <div className="absolute bottom-6 left-6 w-12 h-12 bg-arts-pink/80 rounded-full flex items-center justify-center transform -rotate-12 group-hover:rotate-12 transition-transform duration-500">
+                <div className="absolute bottom-6 left-6 w-12 h-12 bg-arts-pink/80 rounded-full flex items-center justify-center transform -rotate-12">
                   <span className="text-white font-bold text-lg">✨</span>
                 </div>
               </div>
@@ -101,7 +101,7 @@ const About = () => {
             {inspirations.map((item, index) => (
               <div 
                 key={index} 
-                className="creative-card artistic-hover p-8 text-center relative"
+                className="creative-card p-8 text-center relative"
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
                 <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-arts-light-blue/20 to-arts-pink/20 flex items-center justify-center relative">
