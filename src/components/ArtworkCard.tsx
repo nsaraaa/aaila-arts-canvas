@@ -23,25 +23,16 @@ const ArtworkCard = ({ image, title, medium, description, route }: ArtworkCardPr
         <img
           src={image}
           alt={title}
-          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-125"
         />
         
-        {/* Artistic Overlay */}
-        <div className="absolute inset-0 gradient-artistic opacity-0 group-hover:opacity-90 transition-all duration-500 flex flex-col justify-end p-8">
+        {/* Simplified overlay for better image focus */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
           <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-            <h3 className="text-2xl font-heading font-bold text-white mb-2">{title}</h3>
-            <p className="text-sm font-body text-white/90 mb-3 uppercase tracking-wider">{medium}</p>
-            <p className="text-sm font-body text-white/80 line-clamp-3 leading-relaxed">{description}</p>
+            <h3 className="text-xl font-heading font-bold text-white mb-1">{title}</h3>
+            <p className="text-sm font-body text-white/90 mb-2 uppercase tracking-wider">{medium}</p>
+            <p className="text-sm font-body text-white/80 line-clamp-2 leading-relaxed">{description}</p>
           </div>
-        </div>
-        
-        {/* Floating Creative Elements */}
-        <div className="absolute top-4 right-4 w-12 h-12 bg-white/90 rounded-full flex items-center justify-center transform rotate-12 group-hover:rotate-45 transition-transform duration-500 opacity-0 group-hover:opacity-100">
-          <span className="text-arts-light-blue font-bold text-lg">✨</span>
-        </div>
-        
-        <div className="absolute bottom-4 left-4 w-10 h-10 bg-arts-pink/90 rounded-full flex items-center justify-center transform -rotate-12 group-hover:rotate-12 transition-transform duration-500 opacity-0 group-hover:opacity-100">
-          <span className="text-white font-bold text-sm">🎨</span>
         </div>
       </div>
       
