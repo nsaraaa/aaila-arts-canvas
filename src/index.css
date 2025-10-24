@@ -8,13 +8,13 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Aaila Zahra Brand Colors */
-    --light-blue: 207 28% 49%;
-    --dark-blue: 217 49% 17%;
-    --artist-pink: 14 30% 50%;
-    --artist-green: 78 16% 40%;
+    /* Aaila Zahra Brand Colors - Updated Creative Arts Palette */
+    --light-blue: 207 28% 49%; /* #5A7F9F */
+    --dark-blue: 217 49% 17%; /* #162440 */
+    --artist-pink: 14 30% 50%; /* #A46858 */
+    --artist-green: 78 16% 40%; /* #687554 */
     
-    /* Design System */
+    /* Design System - Creative Arts Theme */
     --background: 0 0% 98%;
     --foreground: 217 49% 17%;
 
@@ -24,16 +24,16 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 217 49% 17%;
 
-    --primary: 207 28% 49%;
+    --primary: 207 28% 49%; /* Light blue as primary */
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 78 16% 40%;
+    --secondary: 78 16% 40%; /* Green as secondary */
     --secondary-foreground: 0 0% 100%;
 
     --muted: 207 20% 94%;
     --muted-foreground: 217 25% 40%;
 
-    --accent: 14 30% 50%;
+    --accent: 14 30% 50%; /* Pink as accent */
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
@@ -45,9 +45,12 @@ All colors MUST be HSL.
 
     --radius: 0.75rem;
 
-    /* Artistic Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(207 28% 49% / 0.1), hsl(14 30% 50% / 0.1));
+    /* Creative Arts Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(207 28% 49% / 0.15), hsl(14 30% 50% / 0.15), hsl(78 16% 40% / 0.1));
     --gradient-accent: linear-gradient(135deg, hsl(207 28% 49%), hsl(78 16% 40%));
+    --gradient-pink-blue: linear-gradient(135deg, hsl(14 30% 50%), hsl(207 28% 49%));
+    --gradient-green-blue: linear-gradient(135deg, hsl(78 16% 40%), hsl(207 28% 49%));
+    --gradient-artistic: linear-gradient(45deg, hsl(207 28% 49% / 0.8), hsl(14 30% 50% / 0.8), hsl(78 16% 40% / 0.8));
     
     /* Shadows */
     --shadow-soft: 0 4px 20px -2px hsl(207 28% 49% / 0.15);
@@ -135,6 +138,66 @@ All colors MUST be HSL.
   
   .artistic-gradient {
     background: var(--gradient-hero);
+  }
+  
+  .gradient-pink-blue {
+    background: var(--gradient-pink-blue);
+  }
+  
+  .gradient-green-blue {
+    background: var(--gradient-green-blue);
+  }
+  
+  .gradient-artistic {
+    background: var(--gradient-artistic);
+  }
+  
+  .text-arts-light-blue {
+    color: #5A7F9F;
+  }
+  
+  .text-arts-dark-blue {
+    color: #162440;
+  }
+  
+  .text-arts-pink {
+    color: #A46858;
+  }
+  
+  .text-arts-green {
+    color: #687554;
+  }
+  
+  .bg-arts-light-blue {
+    background-color: #5A7F9F;
+  }
+  
+  .bg-arts-dark-blue {
+    background-color: #162440;
+  }
+  
+  .bg-arts-pink {
+    background-color: #A46858;
+  }
+  
+  .bg-arts-green {
+    background-color: #687554;
+  }
+  
+  .border-arts-light-blue {
+    border-color: #5A7F9F;
+  }
+  
+  .border-arts-dark-blue {
+    border-color: #162440;
+  }
+  
+  .border-arts-pink {
+    border-color: #A46858;
+  }
+  
+  .border-arts-green {
+    border-color: #687554;
   }
 }
 

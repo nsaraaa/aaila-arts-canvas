@@ -18,6 +18,10 @@ export default {
         body: ['Poppins', 'sans-serif'],
       },
       colors: {
+        'arts-light-blue': '#5A7F9F',
+        'arts-dark-blue': '#162440',
+        'arts-pink': '#A46858',
+        'arts-green': '#687554',
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

@@ -48,10 +48,10 @@ const Portfolio = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16 fade-in-up">
-          <h1 className="text-5xl sm:text-6xl font-heading font-bold mb-6">
+          <h1 className="text-5xl sm:text-6xl font-heading font-bold mb-6 text-arts-dark-blue">
             Portfolio
           </h1>
-          <p className="text-lg font-body text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg font-body text-arts-dark-blue/70 max-w-2xl mx-auto">
             A collection of my visual art and handcrafted pieces, each telling its own story
             through color, texture, and form.
           </p>

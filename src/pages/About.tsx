@@ -25,10 +25,10 @@ const About = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16 fade-in-up">
-          <h1 className="text-5xl sm:text-6xl font-heading font-bold mb-6">
+          <h1 className="text-5xl sm:text-6xl font-heading font-bold mb-6 text-arts-dark-blue">
             About Me
           </h1>
-          <p className="text-lg font-body text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg font-body text-arts-dark-blue/70 max-w-2xl mx-auto">
             A journey through art, creativity, and self-expression
           </p>
         </div>
@@ -38,9 +38,9 @@ const About = () => {
           {/* Image */}
           <div className="fade-in">
             <div className="relative">
-              <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-accent/20 rounded-3xl blur-2xl" />
-              <div className="relative aspect-[4/5] rounded-3xl bg-muted overflow-hidden">
-                <div className="absolute inset-0 flex items-center justify-center text-muted-foreground font-body">
+              <div className="absolute -inset-4 gradient-pink-blue rounded-3xl blur-2xl opacity-30" />
+              <div className="relative aspect-[4/5] rounded-3xl bg-gradient-to-br from-arts-light-blue/10 to-arts-pink/10 overflow-hidden border-4 border-arts-light-blue/20">
+                <div className="absolute inset-0 flex items-center justify-center text-arts-dark-blue font-body">
                   Portrait Photo
                 </div>
               </div>
@@ -49,10 +49,10 @@ const About = () => {
 
           {/* Story */}
           <div className="fade-in-up space-y-6">
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-arts-dark-blue">
               Hello, I'm Aaila Zahra
             </h2>
-            <div className="space-y-4 font-body text-foreground/80 leading-relaxed">
+            <div className="space-y-4 font-body text-arts-dark-blue/80 leading-relaxed">
               <p>
                 I'm a visual artist and craft creator based in [location], passionate about
                 bringing color, texture, and emotion into every piece I create. My journey
@@ -77,24 +77,24 @@ const About = () => {
 
         {/* Inspiration Section */}
         <div className="fade-in-up">
-          <h2 className="text-3xl sm:text-4xl font-heading font-bold text-center mb-12">
+          <h2 className="text-3xl sm:text-4xl font-heading font-bold text-center mb-12 text-arts-dark-blue">
             What Inspires Me
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             {inspirations.map((item, index) => (
               <Card 
                 key={index} 
-                className="border-border hover-lift"
+                className="border-arts-light-blue/20 hover:border-arts-light-blue/40 hover-lift transition-all duration-300"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <CardContent className="p-6 text-center">
-                  <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
-                    <item.icon className="text-primary" size={32} />
+                <CardContent className="p-6 text-center bg-gradient-to-br from-white to-arts-light-blue/5">
+                  <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-arts-light-blue/20 to-arts-pink/20 flex items-center justify-center">
+                    <item.icon className="text-arts-light-blue" size={32} />
                   </div>
-                  <h3 className="text-xl font-heading font-semibold mb-3">
+                  <h3 className="text-xl font-heading font-semibold mb-3 text-arts-dark-blue">
                     {item.title}
                   </h3>
-                  <p className="font-body text-muted-foreground">
+                  <p className="font-body text-arts-dark-blue/70">
                     {item.description}
                   </p>
                 </CardContent>
@@ -106,10 +106,10 @@ const About = () => {
         {/* Materials Section */}
         <div className="mt-20 fade-in-up">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold mb-6">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold mb-6 text-arts-dark-blue">
               Favorite Materials
             </h2>
-            <p className="font-body text-foreground/80 leading-relaxed mb-8">
+            <p className="font-body text-arts-dark-blue/80 leading-relaxed mb-8">
               I work with a variety of mediums, each offering unique possibilities for
               expression. My favorites include acrylic paints for their vibrant colors,
               textiles for their tactile qualities, handmade papers for their organic

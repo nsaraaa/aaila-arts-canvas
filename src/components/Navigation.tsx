@@ -20,7 +20,7 @@ const Navigation = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <Link to="/" className="text-2xl font-heading font-bold text-foreground hover:text-primary transition-colors">
+          <Link to="/" className="text-2xl font-heading font-bold text-arts-dark-blue hover:text-arts-light-blue transition-colors">
             Aaila Zahra
           </Link>
 
@@ -31,12 +31,12 @@ const Navigation = () => {
                 key={link.path}
                 to={link.path}
                 className={`font-body font-medium transition-colors relative group ${
-                  isActive(link.path) ? "text-primary" : "text-foreground hover:text-primary"
+                  isActive(link.path) ? "text-arts-light-blue" : "text-arts-dark-blue hover:text-arts-light-blue"
                 }`}
               >
                 {link.label}
                 <span
-                  className={`absolute bottom-0 left-0 w-full h-0.5 bg-primary transform origin-left transition-transform duration-300 ${
+                  className={`absolute bottom-0 left-0 w-full h-0.5 bg-arts-light-blue transform origin-left transition-transform duration-300 ${
                     isActive(link.path) ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
                   }`}
                 />
@@ -47,7 +47,7 @@ const Navigation = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-foreground hover:text-primary transition-colors"
+            className="md:hidden text-arts-dark-blue hover:text-arts-light-blue transition-colors"
             aria-label="Toggle menu"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -64,7 +64,7 @@ const Navigation = () => {
                   to={link.path}
                   onClick={() => setIsOpen(false)}
                   className={`font-body font-medium py-2 transition-colors ${
-                    isActive(link.path) ? "text-primary" : "text-foreground hover:text-primary"
+                    isActive(link.path) ? "text-arts-light-blue" : "text-arts-dark-blue hover:text-arts-light-blue"
                   }`}
                 >
                   {link.label}
