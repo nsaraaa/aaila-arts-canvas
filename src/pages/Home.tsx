@@ -32,7 +32,18 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative min-h-[100vh] flex items-center artistic-section overflow-hidden">
+      <section className="relative min-h-[100vh] flex items-center overflow-hidden">
+        {/* Your artwork as full-width background */}
+        <div className="absolute inset-0 w-full h-full">
+          <img
+            src={heroArtwork}
+            alt="Aaila Zahra's artwork background"
+            className="w-full h-full object-cover"
+          />
+          {/* Dark overlay for text readability */}
+          <div className="absolute inset-0 bg-black/40"></div>
+        </div>
+        
         {/* Floating Shapes */}
         <div className="floating-shape"></div>
         <div className="floating-shape"></div>
@@ -43,20 +54,20 @@ const Home = () => {
             {/* Hero Content */}
             <div className="fade-in-up artistic-brush-stroke">
               <div className="relative">
-                <h1 className="text-6xl sm:text-7xl lg:text-8xl font-heading font-bold mb-8 leading-tight">
+                <h1 className="text-6xl sm:text-7xl lg:text-8xl font-heading font-bold mb-8 leading-tight text-white">
                   <span className="block">Hi, I'm</span>
-                  <span className="artistic-text creative-text-shadow">Aaila Zahra</span>
+                  <span className="artistic-text">Aaila Zahra</span>
                 </h1>
                 <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-arts-pink to-arts-light-blue rounded-full opacity-20 animate-pulse"></div>
               </div>
               
-              <p className="text-2xl sm:text-3xl font-heading text-arts-dark-blue mb-6 relative">
+              <p className="text-2xl sm:text-3xl font-heading text-white mb-6 relative">
                 <span className="inline-block transform -rotate-2">Visual artist</span>
                 <span className="mx-4 text-arts-pink">&</span>
                 <span className="inline-block transform rotate-1">craft creator</span>
               </p>
               
-              <p className="text-xl font-body text-arts-dark-blue/80 mb-10 max-w-xl leading-relaxed">
+              <p className="text-xl font-body text-white/90 mb-10 max-w-xl leading-relaxed">
                 Color, texture, and emotion in every piece. Explore my journey through
                 visual art and handcrafted creations that tell stories beyond words.
               </p>
@@ -69,35 +80,21 @@ const Home = () => {
                   </button>
                 </Link>
                 <Link to="/contact">
-                  <button className="px-8 py-4 rounded-full text-lg font-semibold border-2 border-arts-pink text-arts-pink hover:bg-arts-pink hover:text-white transition-all duration-300 transform hover:-translate-y-1">
+                  <button className="px-8 py-4 rounded-full text-lg font-semibold border-2 border-white text-white hover:bg-white hover:text-arts-dark-blue transition-all duration-300 transform hover:-translate-y-1">
                     Get in Touch
                   </button>
                 </Link>
               </div>
             </div>
 
-            {/* Hero Image - Ready for your artwork background */}
-            <div className="fade-in relative">
-              {/* This space is ready for your artwork background */}
-              <div className="relative w-full h-[600px] rounded-3xl overflow-hidden">
-                {/* Placeholder for your artwork - you can replace this with your own image */}
-                <div className="w-full h-full bg-gradient-to-br from-arts-light-blue/20 via-arts-pink/20 to-arts-green/20 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-24 h-24 bg-white/80 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <span className="text-4xl">🎨</span>
-                    </div>
-                    <p className="text-arts-dark-blue font-body text-lg">Your artwork will go here</p>
-                  </div>
-                </div>
-                
-                {/* Floating Elements */}
-                <div className="absolute top-6 right-6 w-16 h-16 bg-white/90 rounded-full flex items-center justify-center transform rotate-12 hover:rotate-45 transition-transform duration-500">
-                  <span className="text-arts-light-blue font-bold text-xl">✨</span>
-                </div>
-                
-                <div className="absolute bottom-6 left-6 w-12 h-12 bg-arts-pink/90 rounded-full flex items-center justify-center transform -rotate-12 hover:rotate-12 transition-transform duration-500">
-                  <span className="text-white font-bold text-lg">🎨</span>
-                </div>
+            {/* Floating Elements */}
+            <div className="fade-in relative flex justify-center items-center">
+              <div className="w-32 h-32 bg-white/90 rounded-full flex items-center justify-center transform rotate-12 hover:rotate-45 transition-transform duration-500">
+                <span className="text-arts-light-blue font-bold text-4xl">✨</span>
+              </div>
+              
+              <div className="absolute -bottom-8 -right-8 w-20 h-20 bg-arts-pink/90 rounded-full flex items-center justify-center transform -rotate-12 hover:rotate-12 transition-transform duration-500">
+                <span className="text-white font-bold text-2xl">🎨</span>
               </div>
             </div>
           </div>
