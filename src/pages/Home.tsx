@@ -76,34 +76,27 @@ const Home = () => {
               </div>
             </div>
 
-            {/* Hero Image */}
+            {/* Hero Image - Ready for your artwork background */}
             <div className="fade-in relative">
-              <div className="relative group">
-                {/* Creative Frame */}
-                <div className="absolute -inset-8 gradient-artistic rounded-[3rem] blur-3xl opacity-40 group-hover:opacity-60 transition-opacity duration-500"></div>
-                
-                {/* Artistic Border */}
-                <div className="absolute -inset-4 artistic-border rounded-3xl"></div>
-                
-                {/* Main Image */}
-                <div className="relative overflow-hidden rounded-3xl">
-                  <img
-                    src={heroArtwork}
-                    alt="Featured artwork"
-                    className="w-full h-[600px] object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                  
-                  {/* Overlay Effects */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-arts-dark-blue/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  
-                  {/* Floating Elements */}
-                  <div className="absolute top-6 right-6 w-16 h-16 bg-white/90 rounded-full flex items-center justify-center transform rotate-12 group-hover:rotate-45 transition-transform duration-500">
-                    <span className="text-arts-light-blue font-bold text-xl">✨</span>
+              {/* This space is ready for your artwork background */}
+              <div className="relative w-full h-[600px] rounded-3xl overflow-hidden">
+                {/* Placeholder for your artwork - you can replace this with your own image */}
+                <div className="w-full h-full bg-gradient-to-br from-arts-light-blue/20 via-arts-pink/20 to-arts-green/20 flex items-center justify-center">
+                  <div className="text-center">
+                    <div className="w-24 h-24 bg-white/80 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <span className="text-4xl">🎨</span>
+                    </div>
+                    <p className="text-arts-dark-blue font-body text-lg">Your artwork will go here</p>
                   </div>
-                  
-                  <div className="absolute bottom-6 left-6 w-12 h-12 bg-arts-pink/90 rounded-full flex items-center justify-center transform -rotate-12 group-hover:rotate-12 transition-transform duration-500">
-                    <span className="text-white font-bold text-lg">🎨</span>
-                  </div>
+                </div>
+                
+                {/* Floating Elements */}
+                <div className="absolute top-6 right-6 w-16 h-16 bg-white/90 rounded-full flex items-center justify-center transform rotate-12 hover:rotate-45 transition-transform duration-500">
+                  <span className="text-arts-light-blue font-bold text-xl">✨</span>
+                </div>
+                
+                <div className="absolute bottom-6 left-6 w-12 h-12 bg-arts-pink/90 rounded-full flex items-center justify-center transform -rotate-12 hover:rotate-12 transition-transform duration-500">
+                  <span className="text-white font-bold text-lg">🎨</span>
                 </div>
               </div>
             </div>
