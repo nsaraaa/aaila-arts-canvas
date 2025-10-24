@@ -44,10 +44,6 @@ const Home = () => {
           <div className="absolute inset-0 bg-black/40"></div>
         </div>
         
-        {/* Floating Shapes */}
-        <div className="floating-shape"></div>
-        <div className="floating-shape"></div>
-        <div className="floating-shape"></div>
         
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -56,14 +52,14 @@ const Home = () => {
               <div className="relative">
                 <h1 className="text-6xl sm:text-7xl lg:text-8xl font-heading font-bold mb-8 leading-tight text-white">
                   <span className="block">Hi, I'm</span>
-                  <span className="artistic-text">Aaila Zahra</span>
+                  <span className="text-arts-light-blue">Aaila Zahra</span>
                 </h1>
                 <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-arts-pink to-arts-light-blue rounded-full opacity-20 animate-pulse"></div>
               </div>
               
               <p className="text-2xl sm:text-3xl font-heading text-white mb-6 relative">
                 <span className="inline-block transform -rotate-2">Visual artist</span>
-                <span className="mx-4 text-arts-pink">&</span>
+                <span className="mx-4 text-arts-light-blue">&</span>
                 <span className="inline-block transform rotate-1">craft creator</span>
               </p>
               
@@ -87,16 +83,6 @@ const Home = () => {
               </div>
             </div>
 
-            {/* Floating Elements */}
-            <div className="fade-in relative flex justify-center items-center">
-              <div className="w-32 h-32 bg-white/90 rounded-full flex items-center justify-center transform rotate-12 hover:rotate-45 transition-transform duration-500">
-                <span className="text-arts-light-blue font-bold text-4xl">✨</span>
-              </div>
-              
-              <div className="absolute -bottom-8 -right-8 w-20 h-20 bg-arts-pink/90 rounded-full flex items-center justify-center transform -rotate-12 hover:rotate-12 transition-transform duration-500">
-                <span className="text-white font-bold text-2xl">🎨</span>
-              </div>
-            </div>
           </div>
         </div>
       </section>
