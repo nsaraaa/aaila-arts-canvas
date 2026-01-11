@@ -45,7 +45,7 @@ const Footer = () => {
             <h4 className="text-lg font-heading font-semibold mb-3">Connect</h4>
             <div className="flex space-x-4">
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/aailazahrabutt/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-accent transition-colors"
@@ -54,7 +54,7 @@ const Footer = () => {
                 <Instagram size={24} />
               </a>
               <a
-                href="mailto:hello@aailazahra.com"
+                href="mailto:Aailaazahraabutt@gmail.com"
                 className="text-muted-foreground hover:text-accent transition-colors"
                 aria-label="Email"
               >
@@ -62,7 +62,7 @@ const Footer = () => {
               </a>
             </div>
             <p className="text-sm text-muted-foreground font-body mt-4">
-              hello@aailazahra.com
+              Aailaazahraabutt@gmail.com
             </p>
           </div>
         </div>

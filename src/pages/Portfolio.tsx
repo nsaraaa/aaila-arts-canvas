@@ -1,7 +1,7 @@
 import ArtworkCard from "@/components/ArtworkCard";
-import artwork1 from "@/assets/artwork-1.jpg";
-import artwork2 from "@/assets/artwork-2.jpg";
-import artwork3 from "@/assets/artwork-3.jpg";
+import artwork1 from "@/assets/artwork-1.jpeg";
+import artwork2 from "@/assets/artwork-2.jpeg";
+import artwork3 from "@/assets/artwork-3.jpeg";
 
 const Portfolio = () => {
   const artworks = [
@@ -62,15 +62,18 @@ const Portfolio = () => {
 
         {/* Gallery Grid */}
         <div className="creative-grid">
-          {artworks.map((artwork, index) => (
-            <div 
-              key={index} 
-              className="fade-in-up artistic-hover" 
-              style={{ animationDelay: `${index * 0.15}s` }}
-            >
-              <ArtworkCard {...artwork} />
-            </div>
-          ))}
+          {artworks.map((artwork, index) => {
+            const href = `/image?src=${encodeURIComponent(artwork.image)}&title=${encodeURIComponent(artwork.title)}&desc=${encodeURIComponent(artwork.description)}`;
+            return (
+              <div 
+                key={index} 
+                className="fade-in-up artistic-hover" 
+                style={{ animationDelay: `${index * 0.15}s` }}
+              >
+                <ArtworkCard {...artwork} href={href} />
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>

@@ -1,5 +1,6 @@
 import { Palette, Heart, Sparkles } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import potraitImg from "@/assets/potrait.jpeg";
 
 const About = () => {
   const inspirations = [
@@ -43,9 +44,12 @@ const About = () => {
             <div className="relative group">
               <div className="absolute -inset-6 gradient-pink-blue rounded-[3rem] blur-2xl opacity-30"></div>
               <div className="relative aspect-[4/5] rounded-3xl bg-gradient-to-br from-arts-light-blue/10 to-arts-pink/10 overflow-hidden border-4 border-arts-light-blue/20">
-                <div className="absolute inset-0 flex items-center justify-center text-arts-dark-blue font-body text-lg">
-                  Portrait Photo
-                </div>
+                <img
+                  src={potraitImg}
+                  alt="Portrait of Aaila Zahra"
+                  loading="lazy"
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
                 
                 {/* Creative decorative elements */}
                 <div className="absolute top-6 right-6 w-16 h-16 bg-white/80 rounded-full flex items-center justify-center transform rotate-12">

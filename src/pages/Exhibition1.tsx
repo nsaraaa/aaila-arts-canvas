@@ -1,47 +1,56 @@
 import ArtworkCard from "@/components/ArtworkCard";
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
-import artwork1 from "@/assets/artwork-1.jpg";
-import artwork2 from "@/assets/artwork-2.jpg";
-import artwork3 from "@/assets/artwork-3.jpg";
+import image1 from "@/assets/image1.jpeg";
+import image2 from "@/assets/image2.jpeg";
+import image3 from "@/assets/image3.jpeg";
+import image4 from "@/assets/image4.jpeg";
+import image5 from "@/assets/image5.jpeg";
+import image6 from "@/assets/image6.jpeg";
 
 const Exhibition1 = () => {
   const exhibition1Artworks = [
     {
-      image: artwork2,
+      image: image1,
       title: "Woven Stories",
       medium: "Textile & Natural Materials",
       description: "Handcrafted piece combining traditional weaving techniques with modern aesthetics and sustainable materials",
+      href: `/image?src=${encodeURIComponent(image1)}&title=${encodeURIComponent("Woven Stories")}&desc=${encodeURIComponent("Handcrafted piece combining traditional weaving techniques with modern aesthetics and sustainable materials")}`,
     },
     {
-      image: artwork1,
+      image: image2,
       title: "Natural Threads",
       medium: "Organic Textiles",
       description: "Exploring the relationship between natural materials and contemporary textile art",
+      href: `/image?src=${encodeURIComponent(image2)}&title=${encodeURIComponent("Natural Threads")}&desc=${encodeURIComponent("Exploring the relationship between natural materials and contemporary textile art")}`,
     },
     {
-      image: artwork3,
+      image: image3,
       title: "Fiber Dialogues",
       medium: "Mixed Textile Techniques",
       description: "Conversation between different weaving methods and material textures",
+      href: `/image?src=${encodeURIComponent(image3)}&title=${encodeURIComponent("Fiber Dialogues")}&desc=${encodeURIComponent("Conversation between different weaving methods and material textures")}`,
     },
     {
-      image: artwork2,
+      image: image4,
       title: "Sustainable Beauty",
       medium: "Eco-Friendly Materials",
       description: "Artistic expression through environmentally conscious material choices",
+      href: `/image?src=${encodeURIComponent(image4)}&title=${encodeURIComponent("Sustainable Beauty")}&desc=${encodeURIComponent("Artistic expression through environmentally conscious material choices")}`,
     },
     {
-      image: artwork1,
+      image: image5,
       title: "Textile Traditions",
       medium: "Heritage Techniques",
       description: "Honoring traditional textile methods while exploring contemporary applications",
+      href: `/image?src=${encodeURIComponent(image5)}&title=${encodeURIComponent("Textile Traditions")}&desc=${encodeURIComponent("Honoring traditional textile methods while exploring contemporary applications")}`,
     },
     {
-      image: artwork3,
+      image: image6,
       title: "Material Harmony",
       medium: "Natural Fiber Composition",
       description: "Creating visual harmony through the careful selection and arrangement of natural materials",
+      href: `/image?src=${encodeURIComponent(image6)}&title=${encodeURIComponent("Material Harmony")}&desc=${encodeURIComponent("Creating visual harmony through the careful selection and arrangement of natural materials")}`,
     },
   ];
 

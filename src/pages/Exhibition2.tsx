@@ -1,9 +1,9 @@
 import ArtworkCard from "@/components/ArtworkCard";
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
-import artwork1 from "@/assets/artwork-1.jpg";
-import artwork2 from "@/assets/artwork-2.jpg";
-import artwork3 from "@/assets/artwork-3.jpg";
+import artwork1 from "@/assets/artwork-1.jpeg";
+import artwork2 from "@/assets/artwork-2.jpeg";
+import artwork3 from "@/assets/artwork-3.jpeg";
 
 const Exhibition2 = () => {
   const exhibition2Artworks = [

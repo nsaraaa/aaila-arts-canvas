@@ -1,9 +1,13 @@
 import ArtworkCard from "@/components/ArtworkCard";
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
-import artwork1 from "@/assets/artwork-1.jpg";
-import artwork2 from "@/assets/artwork-2.jpg";
-import artwork3 from "@/assets/artwork-3.jpg";
+import artwork1 from "@/assets/thesis/thesis_image1.jpeg";
+import artwork2 from "@/assets/thesis/thesis_image2.jpeg";
+import artwork3 from "@/assets/thesis/thesis_image3.jpeg";
+import artwork4 from "@/assets/thesis/thesis_image4.jpeg";
+import artwork5 from "@/assets/thesis/thesis_image5.jpeg";
+import artwork6 from "@/assets/thesis/thesis_image6.jpeg";
+import artwork7 from "@/assets/thesis/thesis_image7.jpeg";
 
 const Thesis = () => {
   const thesisArtworks = [
@@ -12,36 +16,49 @@ const Thesis = () => {
       title: "Abstract Dreams",
       medium: "Mixed Media on Canvas",
       description: "An exploration of color and texture through layered abstract forms, combining acrylic paints with collage elements",
+  href: `/image?src=${encodeURIComponent(artwork1)}&title=${encodeURIComponent("Abstract Dreams")}&desc=${encodeURIComponent("An exploration of color and texture through layered abstract forms, combining acrylic paints with collage elements")}`,
     },
     {
       image: artwork2,
       title: "Color Symphony",
       medium: "Acrylic on Canvas",
       description: "Vibrant exploration of complementary colors creating a harmonious visual rhythm",
+  href: `/image?src=${encodeURIComponent(artwork2)}&title=${encodeURIComponent("Color Symphony")}&desc=${encodeURIComponent("Vibrant exploration of complementary colors creating a harmonious visual rhythm")}`,
     },
     {
       image: artwork3,
       title: "Texture Tales",
       medium: "Mixed Media",
       description: "Experimental piece focusing on tactile surfaces and dimensional layers",
+  href: `/image?src=${encodeURIComponent(artwork3)}&title=${encodeURIComponent("Texture Tales")}&desc=${encodeURIComponent("Experimental piece focusing on tactile surfaces and dimensional layers")}`,
     },
     {
-      image: artwork1,
+      image: artwork4,
       title: "Emotional Landscapes",
       medium: "Oil & Mixed Media",
       description: "A journey through emotional states expressed through abstract landscapes",
+  href: `/image?src=${encodeURIComponent(artwork4)}&title=${encodeURIComponent("Emotional Landscapes")}&desc=${encodeURIComponent("A journey through emotional states expressed through abstract landscapes")}`,
     },
     {
-      image: artwork2,
+      image: artwork5,
       title: "Material Conversations",
       medium: "Textile & Paint",
       description: "Dialogue between different materials creating unexpected textures and forms",
+  href: `/image?src=${encodeURIComponent(artwork5)}&title=${encodeURIComponent("Material Conversations")}&desc=${encodeURIComponent("Dialogue between different materials creating unexpected textures and forms")}`,
     },
     {
-      image: artwork3,
+      image: artwork6,
       title: "Thesis Conclusion",
       medium: "Mixed Media Installation",
       description: "Final piece representing the culmination of artistic exploration and discovery",
+  href: `/image?src=${encodeURIComponent(artwork6)}&title=${encodeURIComponent("Thesis Conclusion")}&desc=${encodeURIComponent("Final piece representing the culmination of artistic exploration and discovery")}`,
+    },
+    {
+      image: artwork7,
+      title: "Fragmented Memory",
+      medium: "Collage & Paint",
+      description: "Exploring memory and fragmentation through layered materials and unexpected juxtapositions",
+  href: `/image?src=${encodeURIComponent(artwork7)}&title=${encodeURIComponent("Fragmented Memory")}&desc=${encodeURIComponent("Exploring memory and fragmentation through layered materials and unexpected juxtapositions")}`,
     },
   ];
 

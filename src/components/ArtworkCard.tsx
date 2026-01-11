@@ -7,9 +7,10 @@ interface ArtworkCardProps {
   medium: string;
   description: string;
   route?: string;
+  href?: string; // external link (e.g., open in new tab)
 }
 
-const ArtworkCard = ({ image, title, medium, description, route }: ArtworkCardProps) => {
+const ArtworkCard = ({ image, title, medium, description, route, href }: ArtworkCardProps) => {
   const CardContent = (
     <div className="creative-card artistic-hover group cursor-pointer overflow-hidden rounded-3xl relative">
       {/* Creative Background Pattern */}
@@ -25,6 +26,16 @@ const ArtworkCard = ({ image, title, medium, description, route }: ArtworkCardPr
           alt={title}
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-125"
         />
+        {/* Invisible link overlay so clicking the image opens in a new tab reliably */}
+        {href && (
+          <a
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`Open ${title} in new tab`}
+            className="absolute inset-0 z-10"
+          />
+        )}
         
         {/* Simplified overlay for better image focus */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
@@ -49,7 +60,7 @@ const ArtworkCard = ({ image, title, medium, description, route }: ArtworkCardPr
     </div>
   );
 
-  // If route is provided, wrap in Link, otherwise return as is
+  // If route is provided, wrap in Link so the whole card navigates
   if (route) {
     return (
       <Link to={route} className="block">
@@ -58,6 +69,8 @@ const ArtworkCard = ({ image, title, medium, description, route }: ArtworkCardPr
     );
   }
 
+  // Otherwise just return the card content. If `href` was provided,
+  // the invisible anchor overlay inside the image area will open it in a new tab.
   return CardContent;
 };
 

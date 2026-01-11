@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
-import { Mail, Instagram, MapPin } from "lucide-react";
+import { Mail, Instagram, MapPin, Phone } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
@@ -45,16 +45,22 @@ const Contact = () => {
 
   const contactInfo = [
     {
+      icon: Phone,
+      title: "Phone",
+      content: "+92 331 4110755",
+      link: "tel:+923314110755",
+    },
+    {
       icon: Mail,
       title: "Email",
-      content: "hello@aailazahra.com",
-      link: "mailto:hello@aailazahra.com",
+      content: "Aailaazahraabutt@gmail.com",
+      link: "mailto:Aailaazahraabutt@gmail.com",
     },
     {
       icon: Instagram,
       title: "Instagram",
-      content: "@aaila_zahra",
-      link: "https://instagram.com",
+      content: "@aailazahrabutt",
+      link: "https://www.instagram.com/aailazahrabutt/",
     },
     {
       icon: MapPin,

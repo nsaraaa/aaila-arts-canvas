@@ -1,10 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import heroArtwork from "@/assets/hero-artwork.jpg";
-import artwork1 from "@/assets/artwork-1.jpg";
-import artwork2 from "@/assets/artwork-2.jpg";
-import artwork3 from "@/assets/artwork-3.jpg";
+import heroArtwork from "@/assets/hero-artwork.jpeg";
+import artwork1 from "@/assets/artwork-1.jpeg";
 import ArtworkCard from "@/components/ArtworkCard";
 
 const Home = () => {
@@ -16,22 +14,6 @@ const Home = () => {
       medium: "Mixed Media Series",
       description: "An exploration of color and texture through layered abstract forms",
       route: "/thesis"
-    },
-    {
-      id: "exhibition1",
-      image: artwork2,
-      title: "Exhibition 1",
-      medium: "Textile & Natural Materials",
-      description: "Handcrafted piece combining traditional weaving with modern aesthetics",
-      route: "/exhibition1"
-    },
-    {
-      id: "exhibition2",
-      image: artwork3,
-      title: "Exhibition 2",
-      medium: "Paper Collage Series",
-      description: "Contemporary composition celebrating simplicity and balance",
-      route: "/exhibition2"
     },
   ];
 
@@ -113,7 +95,7 @@ const Home = () => {
             {featuredWorks.map((work, index) => (
               <div 
                 key={index} 
-                className="fade-in-up artistic-hover" 
+                className="fade-in-up artistic-hover max-w-md mx-auto"
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
                 <ArtworkCard {...work} />
@@ -122,9 +104,9 @@ const Home = () => {
           </div>
 
           <div className="text-center mt-16">
-            <Link to="/portfolio">
+            <Link to="/thesis">
               <button className="creative-button px-10 py-4 rounded-full text-lg font-semibold">
-                Explore All Artworks
+                View Thesis Collection
                 <ArrowRight className="ml-3 inline-block group-hover:translate-x-1 transition-transform" size={20} />
               </button>
             </Link>
