@@ -1,45 +1,48 @@
 import ArtworkCard from "@/components/ArtworkCard";
-import artwork1 from "@/assets/artwork-1.jpeg";
-import artwork2 from "@/assets/artwork-2.jpeg";
-import artwork3 from "@/assets/artwork-3.jpeg";
+import quietPatch1 from "@/assets/assets2/A Quiet Patch (i).png";
+import quietPatch2 from "@/assets/assets2/A Quiet Patch (ii).png";
+import railwayColony from "@/assets/assets2/Railway Colony, A love letter to Home.png";
+import closingOfTheDay from "@/assets/assets2/Closing of the Day.png";
+import silentGarden from "@/assets/assets2/Over the Silent Garden.png";
+import landReclaims from "@/assets/assets2/The Land Reclaims.png";
 
 const Portfolio = () => {
   const artworks = [
     {
-      image: artwork1,
-      title: "Abstract Dreams",
-      medium: "Mixed Media on Canvas",
-      description: "An exploration of color and texture through layered abstract forms, combining acrylic paints with collage elements",
+      image: quietPatch1,
+      title: "A Quiet Patch (i)",
+      medium: "Gouache on Wasli",
+      description: "Size: 2 x 8 inches | Year: 2024",
     },
     {
-      image: artwork2,
-      title: "Woven Stories",
-      medium: "Textile & Natural Materials",
-      description: "Handcrafted piece combining traditional weaving techniques with modern aesthetics and sustainable materials",
+      image: quietPatch2,
+      title: "A Quiet Patch (ii)",
+      medium: "Gouache on Wasli",
+      description: "Size: 2 x 6 inches | Year: 2024",
     },
     {
-      image: artwork3,
-      title: "Paper Harmony",
-      medium: "Paper Collage",
-      description: "Contemporary composition celebrating simplicity and balance through carefully layered paper elements",
+      image: railwayColony,
+      title: "Railway Colony, A love letter to Home",
+      medium: "Gouache on Wasli",
+      description: "Size: 19.5 x 21 inches | Year: 2024",
     },
     {
-      image: artwork1,
-      title: "Color Symphony",
-      medium: "Acrylic on Canvas",
-      description: "Vibrant exploration of complementary colors creating a harmonious visual rhythm",
+      image: closingOfTheDay,
+      title: "Closing of the Day",
+      medium: "Gouache on Arches Paper",
+      description: "Size: 17 x 13.5 inches | Year: 2024",
     },
     {
-      image: artwork2,
-      title: "Texture Tales",
-      medium: "Mixed Media",
-      description: "Experimental piece focusing on tactile surfaces and dimensional layers",
+      image: silentGarden,
+      title: "Over the Silent Garden",
+      medium: "Gouache on Wasli",
+      description: "Size: 19.5 x 18.5 inches | Year: 2024",
     },
     {
-      image: artwork3,
-      title: "Serene Spaces",
-      medium: "Watercolor & Ink",
-      description: "Minimalist composition inspired by natural landscapes and quiet moments",
+      image: landReclaims,
+      title: "The Land Reclaims",
+      medium: "Gouache on Arches Paper",
+      description: "Size: 19 x 17 inches | Year: 2024",
     },
   ];
 
@@ -55,8 +58,8 @@ const Portfolio = () => {
             <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-40 h-1 bg-gradient-to-r from-arts-light-blue via-arts-pink to-arts-green rounded-full"></div>
           </div>
           <p className="text-xl font-body text-arts-dark-blue/70 max-w-3xl mx-auto leading-relaxed">
-            A collection of my visual art and handcrafted pieces, each telling its own story
-            through color, texture, and form. Every piece is a journey of creative expression.
+            A selected portfolio of recent thesis works, exploring home, memory, weather,
+            and light through gouache on paper.
           </p>
         </div>
 
