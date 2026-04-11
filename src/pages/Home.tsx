@@ -2,14 +2,14 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroArtwork from "@/assets/hero-artwork.jpeg";
-import artwork1 from "@/assets/artwork-1.jpeg";
+import quietPatch1 from "@/assets/assets2/A Quiet Patch (i).png";
 import ArtworkCard from "@/components/ArtworkCard";
 
 const Home = () => {
   const featuredWorks = [
     {
       id: "thesis",
-      image: artwork1,
+      image: quietPatch1,
       title: "Thesis Collection",
       medium: "Mixed Media Series",
       description: "An exploration of color and texture through layered abstract forms",
