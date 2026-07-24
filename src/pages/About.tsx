@@ -1,21 +1,26 @@
-import { Feather, FileText, Heart, Leaf, Palette, Sparkles } from "lucide-react";
+import { Feather, FileText, Heart, Leaf, Palette, Sparkles, CloudHail, Trees, Eclipse } from "lucide-react";
 import potraitImg from "@/assets/potrait.jpeg";
 
 const About = () => {
   const inspirations = [
     {
-      icon: Palette,
-      title: "Natural Beauty",
+      icon: Eclipse,
+      title: "Space",
       description: "Drawing inspiration from organic forms, landscapes, and the ever-changing colors of nature",
     },
     {
-      icon: Heart,
-      title: "Emotional Expression",
+      icon: CloudHail,
+      title: "Weather",
       description: "Creating art that resonates with feelings, memories, and the human experience",
     },
     {
-      icon: Sparkles,
-      title: "Texture & Touch",
+      icon: Leaf,
+      title: "Foliage",
+      description: "Exploring tactile surfaces and dimensional layers that invite closer inspection",
+    },
+    {
+      icon: Trees,
+      title: "Nature",
       description: "Exploring tactile surfaces and dimensional layers that invite closer inspection",
     },
   ];
@@ -96,7 +101,7 @@ const About = () => {
         <div className="fade-in-up mb-24">
           <div className="text-center mb-16">
             <h2 className="text-4xl sm:text-5xl font-heading font-bold mb-6 artistic-text creative-text-shadow">
-              What Inspires Me
+              Elements of Inspiration
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-arts-light-blue to-arts-pink rounded-full mx-auto"></div>
           </div>
