@@ -72,7 +72,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Studio Film Section */}
+      {/* Studio Film Section - Text on Left, Video on Right */}
       <section className="py-24 bg-white relative overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-[0.85fr_1.15fr] gap-12 lg:gap-16 items-center">
@@ -109,41 +109,41 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Featured Works Section */}
+      {/* Featured Works Section - Artwork on Left, Text on Right */}
       <section className="py-24 artistic-section relative">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 fade-in-up">
-            <div className="relative inline-block">
-              <h2 className="text-5xl sm:text-6xl font-heading font-bold mb-4 artistic-text creative-text-shadow">
-                Featured Works
-              </h2>
-              <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-arts-light-blue to-arts-pink rounded-full"></div>
-            </div>
-            <p className="text-xl font-body text-arts-dark-blue/70 max-w-3xl mx-auto leading-relaxed mt-6">
-              A curated selection of recent pieces showcasing my artistic exploration
-              through color, texture, and creative expression
-            </p>
-          </div>
-
-          <div className="creative-grid">
-            {featuredWorks.map((work, index) => (
-              <div 
-                key={index} 
-                className="fade-in-up artistic-hover max-w-md mx-auto"
-                style={{ animationDelay: `${index * 0.2}s` }}
-              >
-                <ArtworkCard {...work} />
+          <div className="grid lg:grid-cols-[1fr_1fr] gap-12 items-center">
+            {/* Artwork Card - Left Side */}
+            <div className="fade-in-up max-w-md mx-auto lg:mx-0">
+              <div className="artistic-hover">
+                {featuredWorks.map((work, index) => (
+                  <ArtworkCard key={index} {...work} />
+                ))}
               </div>
-            ))}
-          </div>
+            </div>
 
-          <div className="text-center mt-16">
-            <Link to="/thesis">
-              <button className="px-10 py-4 rounded-full text-lg font-semibold bg-arts-dark-blue text-white hover:bg-arts-light-blue hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
-                View Thesis Collection
-                <ArrowRight className="ml-3 inline-block group-hover:translate-x-1 transition-transform" size={20} />
-              </button>
-            </Link>
+            {/* Text Content - Right Side */}
+            <div className="fade-in-up" style={{ animationDelay: "0.15s" }}>
+              <div className="relative inline-block mb-6">
+                <h2 className="text-5xl sm:text-6xl font-heading font-bold artistic-text creative-text-shadow">
+                  Featured Works
+                </h2>
+                <div className="absolute -bottom-1 left-0 w-32 h-1 bg-gradient-to-r from-arts-light-blue to-arts-pink rounded-full"></div>
+              </div>
+              <p className="text-xl font-body text-arts-dark-blue/70 leading-relaxed max-w-xl">
+                A curated selection of recent pieces showcasing my artistic exploration
+                through color, texture, and creative expression.
+              </p>
+              
+              <div className="mt-10">
+                <Link to="/thesis">
+                  <button className="px-10 py-4 rounded-full text-lg font-semibold text-white hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl" style={{ backgroundColor: '#287680' }}>
+                    View Thesis Collection
+                    <ArrowRight className="ml-3 inline-block group-hover:translate-x-1 transition-transform" size={20} />
+                  </button>
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>
