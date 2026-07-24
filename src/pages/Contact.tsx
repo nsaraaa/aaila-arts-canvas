@@ -13,8 +13,12 @@ const Contact = () => {
     email: "",
     message: "",
   });
+  const [isLoading, setIsLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  // REPLACE THIS URL WITH YOUR GOOGLE APPS SCRIPT WEB APP URL
+  const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyzVVRIMA2RLh-SR7qJcw6HOjCq9Opim0ndoqYGV1M1TY3qWHWDfCCHaT5Q-Y3nih81/exec";
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     // Form validation
@@ -26,14 +30,43 @@ const Contact = () => {
       return;
     }
 
-    // Success message
-    toast({
-      title: "Message sent!",
-      description: "Thank you for reaching out. I'll get back to you soon.",
-    });
+    setIsLoading(true);
 
-    // Reset form
-    setFormData({ name: "", email: "", message: "" });
+    try {
+      // Send data to Google Sheets
+      const response = await fetch(SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors', // Required for Google Apps Script
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        }),
+      });
+
+      // With 'no-cors', we can't read the response, so we assume success
+      // Success message
+      toast({
+        title: "Message sent!",
+        description: "Thank you for reaching out. I'll get back to you soon.",
+      });
+
+      // Reset form
+      setFormData({ name: "", email: "", message: "" });
+      
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again later.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -105,6 +138,7 @@ const Contact = () => {
                       onChange={handleChange}
                       placeholder="Your name"
                       className="font-body"
+                      required
                     />
                   </div>
                   <div>
@@ -119,6 +153,7 @@ const Contact = () => {
                       onChange={handleChange}
                       placeholder="your.email@example.com"
                       className="font-body"
+                      required
                     />
                   </div>
                   <div>
@@ -133,10 +168,16 @@ const Contact = () => {
                       placeholder="Tell me about your project or inquiry..."
                       rows={6}
                       className="font-body"
+                      required
                     />
                   </div>
-                  <Button type="submit" size="lg" className="w-full font-body">
-                    Send Message
+                  <Button 
+                    type="submit" 
+                    size="lg" 
+                    className="w-full font-body"
+                    disabled={isLoading}
+                  >
+                    {isLoading ? "Sending..." : "Send Message"}
                   </Button>
                 </form>
               </CardContent>
