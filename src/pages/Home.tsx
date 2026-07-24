@@ -34,23 +34,18 @@ const Home = () => {
           <div className="absolute inset-0 bg-black/40"></div>
         </div>
         
-        
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Hero Content */}
-            <div className="fade-in-up artistic-brush-stroke">
-              <div className="relative">
-                <h1 className="text-6xl sm:text-7xl lg:text-8xl font-heading font-bold mb-8 leading-tight text-white">
-                  <span className="block">Hi, I'm</span>
-                  <span className="text-arts-light-blue">Aaila Zahra</span>
-                </h1>
-                <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-arts-pink to-arts-light-blue rounded-full opacity-20 animate-pulse"></div>
-              </div>
+            <div className="">
+              <h1 className="text-6xl sm:text-7xl lg:text-8xl font-heading font-bold mb-8 leading-tight text-white">
+                <span className="block">Hi, I'm</span>
+                <span className="text-arts-light-blue">Aaila Zahra</span>
+              </h1>
               
-              <p className="text-2xl sm:text-3xl font-heading text-white mb-6 relative">
-                <span className="inline-block transform -rotate-2">Visual artist</span>
-                <span className="mx-4 text-arts-light-blue">&</span>
-                <span className="inline-block transform rotate-1">craft creator</span>
+              <p className="text-2xl sm:text-3xl font-heading text-white mb-6">
+                <span className="inline-block ">Visual artist</span>
+                
               </p>
               
               <p className="text-xl font-body text-white/90 mb-10 max-w-xl leading-relaxed">
@@ -60,13 +55,13 @@ const Home = () => {
               
               <div className="flex flex-col sm:flex-row gap-6">
                 <Link to="/portfolio">
-                  <button className="creative-button px-8 py-4 rounded-full text-lg font-semibold">
+                  <button className="px-8 py-4 rounded-full text-lg font-semibold bg-white text-arts-dark-blue hover:bg-arts-light-blue hover:text-white transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl">
                     View Portfolio
                     <ArrowRight className="ml-3 inline-block group-hover:translate-x-1 transition-transform" size={20} />
                   </button>
                 </Link>
                 <Link to="/contact">
-                  <button className="px-8 py-4 rounded-full text-lg font-semibold border-2 border-white text-white hover:bg-white hover:text-arts-dark-blue transition-all duration-300 transform hover:-translate-y-1">
+                  <button className="px-8 py-4 rounded-full text-lg font-semibold border-2 border-white text-white hover:bg-white hover:text-arts-dark-blue transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl">
                     Get in Touch
                   </button>
                 </Link>
@@ -94,7 +89,7 @@ const Home = () => {
               </p>
             </div>
 
-            <div className="fade-in-up artistic-hover" style={{ animationDelay: "0.15s" }}>
+            <div className="fade-in-up" style={{ animationDelay: "0.15s" }}>
               <div className="relative mx-auto w-full max-w-[420px] overflow-hidden rounded-[0.5rem] shadow-[var(--shadow-hover)] bg-arts-dark-blue">
                 <video
                   className="w-full aspect-[9/16] object-cover"
@@ -103,6 +98,7 @@ const Home = () => {
                   muted
                   loop
                   playsInline
+                  data-autoplay
                   controls
                   preload="metadata"
                   aria-label="Aaila Zahra studio video"
@@ -116,14 +112,14 @@ const Home = () => {
       {/* Featured Works Section */}
       <section className="py-24 artistic-section relative">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16 fade-in-up">
+          <div className="text-center mb-12 fade-in-up">
             <div className="relative inline-block">
-              <h2 className="text-5xl sm:text-6xl font-heading font-bold mb-6 artistic-text creative-text-shadow">
+              <h2 className="text-5xl sm:text-6xl font-heading font-bold mb-4 artistic-text creative-text-shadow">
                 Featured Works
               </h2>
-              <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-arts-light-blue to-arts-pink rounded-full"></div>
+              <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-arts-light-blue to-arts-pink rounded-full"></div>
             </div>
-            <p className="text-xl font-body text-arts-dark-blue/70 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl font-body text-arts-dark-blue/70 max-w-3xl mx-auto leading-relaxed mt-6">
               A curated selection of recent pieces showcasing my artistic exploration
               through color, texture, and creative expression
             </p>
@@ -143,7 +139,7 @@ const Home = () => {
 
           <div className="text-center mt-16">
             <Link to="/thesis">
-              <button className="creative-button px-10 py-4 rounded-full text-lg font-semibold">
+              <button className="px-10 py-4 rounded-full text-lg font-semibold bg-arts-dark-blue text-white hover:bg-arts-light-blue hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
                 View Thesis Collection
                 <ArrowRight className="ml-3 inline-block group-hover:translate-x-1 transition-transform" size={20} />
               </button>
@@ -158,14 +154,12 @@ const Home = () => {
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${ctaBackground})` }}
         />
+        <div className="absolute inset-0 bg-black/50"></div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <div className="max-w-4xl mx-auto fade-in-up">
-            <div className="relative inline-block mb-8">
-              <h2 className="text-5xl sm:text-6xl font-heading font-bold mb-6 text-white creative-text-shadow">
-                Let's Create Together
-              </h2>
-              <div className="absolute -top-4 -right-4 w-20 h-20 bg-white/20 rounded-full animate-pulse"></div>
-            </div>
+            <h2 className="text-5xl sm:text-6xl font-heading font-bold mb-6 text-white creative-text-shadow">
+              Let's Create Together
+            </h2>
             
             <p className="text-xl font-body text-white/90 mb-12 max-w-2xl mx-auto leading-relaxed">
               Interested in a custom piece or collaboration? I'd love to hear about your vision
@@ -174,19 +168,19 @@ const Home = () => {
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <Link to="/contact">
-                <button className="px-12 py-5 rounded-full text-xl font-semibold bg-white text-arts-dark-blue hover:bg-white/90 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl">
+                <button className="px-12 py-5 rounded-full text-xl font-semibold bg-white text-arts-dark-blue hover:bg-arts-light-blue hover:text-white transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl">
                   Start a Conversation
                 </button>
               </Link>
               
               <div className="flex items-center gap-4 text-white/80">
-                <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
+                <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm hover:bg-white/30 transition-all duration-300">
                   <MessageCircle className="text-white" size={20} aria-hidden="true" />
                 </div>
-                <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
+                <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm hover:bg-white/30 transition-all duration-300">
                   <Palette className="text-white" size={20} aria-hidden="true" />
                 </div>
-                <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
+                <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm hover:bg-white/30 transition-all duration-300">
                   <Sparkles className="text-white" size={20} aria-hidden="true" />
                 </div>
               </div>
