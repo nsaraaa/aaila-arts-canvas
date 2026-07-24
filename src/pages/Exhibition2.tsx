@@ -1,5 +1,5 @@
 import ArtworkCard from "@/components/ArtworkCard";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, FileText, Palette, Scissors } from "lucide-react";
 import { Link } from "react-router-dom";
 import artwork1 from "@/assets/artwork-1.jpeg";
 import artwork2 from "@/assets/artwork-2.jpeg";
@@ -102,13 +102,13 @@ const Exhibition2 = () => {
               </p>
               <div className="flex justify-center items-center gap-8 flex-wrap">
                 <div className="w-16 h-16 bg-gradient-to-br from-arts-light-blue/20 to-arts-light-blue/40 rounded-full flex items-center justify-center">
-                  <span className="text-2xl">📄</span>
+                  <FileText className="text-arts-light-blue" size={28} aria-hidden="true" />
                 </div>
                 <div className="w-16 h-16 bg-gradient-to-br from-arts-pink/20 to-arts-pink/40 rounded-full flex items-center justify-center">
-                  <span className="text-2xl">🎨</span>
+                  <Palette className="text-arts-pink" size={28} aria-hidden="true" />
                 </div>
                 <div className="w-16 h-16 bg-gradient-to-br from-arts-green/20 to-arts-green/40 rounded-full flex items-center justify-center">
-                  <span className="text-2xl">✂️</span>
+                  <Scissors className="text-arts-green" size={28} aria-hidden="true" />
                 </div>
               </div>
             </div>

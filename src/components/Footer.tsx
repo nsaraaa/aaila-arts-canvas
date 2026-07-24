@@ -9,7 +9,7 @@ const Footer = () => {
           <div>
             <h3 className="text-2xl font-heading font-bold mb-3">Aaila Zahra</h3>
             <p className="text-muted-foreground font-body">
-              Visual artist & craft creator bringing color, texture, and emotion to every piece.
+              Visual artist bringing color, texture, and emotion to every piece.
             </p>
           </div>
 

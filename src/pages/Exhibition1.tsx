@@ -1,5 +1,5 @@
 import ArtworkCard from "@/components/ArtworkCard";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, Feather, Leaf, Recycle } from "lucide-react";
 import { Link } from "react-router-dom";
 import image1 from "@/assets/image1.jpeg";
 import image2 from "@/assets/image2.jpeg";
@@ -110,13 +110,13 @@ const Exhibition1 = () => {
               </p>
               <div className="flex justify-center items-center gap-8 flex-wrap">
                 <div className="w-16 h-16 bg-gradient-to-br from-arts-light-blue/20 to-arts-light-blue/40 rounded-full flex items-center justify-center">
-                  <span className="text-2xl">🧵</span>
+                  <Feather className="text-arts-light-blue" size={28} aria-hidden="true" />
                 </div>
                 <div className="w-16 h-16 bg-gradient-to-br from-arts-pink/20 to-arts-pink/40 rounded-full flex items-center justify-center">
-                  <span className="text-2xl">🌿</span>
+                  <Leaf className="text-arts-pink" size={28} aria-hidden="true" />
                 </div>
                 <div className="w-16 h-16 bg-gradient-to-br from-arts-green/20 to-arts-green/40 rounded-full flex items-center justify-center">
-                  <span className="text-2xl">♻️</span>
+                  <Recycle className="text-arts-green" size={28} aria-hidden="true" />
                 </div>
               </div>
             </div>

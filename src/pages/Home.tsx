@@ -1,9 +1,11 @@
-import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, MessageCircle, Palette, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroArtwork from "@/assets/hero-artwork.jpeg";
 import quietPatch1 from "@/assets/assets2/A Quiet Patch (i).png";
+import studioVideo from "../../assets/Aaila 1.mp4";
 import ArtworkCard from "@/components/ArtworkCard";
+
+const ctaBackground = new URL("../../assets/background.jpeg", import.meta.url).href;
 
 const Home = () => {
   const featuredWorks = [
@@ -75,6 +77,42 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Studio Film Section */}
+      <section className="py-24 bg-white relative overflow-hidden">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-[0.85fr_1.15fr] gap-12 lg:gap-16 items-center">
+            <div className="fade-in-up">
+              <div className="relative inline-block mb-8">
+                <h2 className="text-5xl sm:text-6xl font-heading font-bold artistic-text creative-text-shadow">
+                  In Motion
+                </h2>
+                <div className="absolute -bottom-2 left-0 w-28 h-1 bg-gradient-to-r from-arts-light-blue to-arts-pink rounded-full"></div>
+              </div>
+              <p className="text-xl font-body text-arts-dark-blue/75 leading-relaxed max-w-xl">
+                A glimpse into the atmosphere behind the work, where memory, surface,
+                and hand-drawn detail come together slowly through the process.
+              </p>
+            </div>
+
+            <div className="fade-in-up artistic-hover" style={{ animationDelay: "0.15s" }}>
+              <div className="relative mx-auto w-full max-w-[420px] overflow-hidden rounded-[0.5rem] shadow-[var(--shadow-hover)] bg-arts-dark-blue">
+                <video
+                  className="w-full aspect-[9/16] object-cover"
+                  src={studioVideo}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  controls
+                  preload="metadata"
+                  aria-label="Aaila Zahra studio video"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Featured Works Section */}
       <section className="py-24 artistic-section relative">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -115,12 +153,11 @@ const Home = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 gradient-artistic relative overflow-hidden">
-        {/* Creative Background Elements */}
-        <div className="absolute top-10 left-10 w-32 h-32 bg-white/10 rounded-full blur-xl"></div>
-        <div className="absolute bottom-10 right-10 w-40 h-40 bg-white/10 rounded-full blur-xl"></div>
-        <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-white/5 rounded-full blur-lg"></div>
-        
+      <section className="py-24 relative overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${ctaBackground})` }}
+        />
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <div className="max-w-4xl mx-auto fade-in-up">
             <div className="relative inline-block mb-8">
@@ -144,13 +181,13 @@ const Home = () => {
               
               <div className="flex items-center gap-4 text-white/80">
                 <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
-                  <span className="text-xl">💬</span>
+                  <MessageCircle className="text-white" size={20} aria-hidden="true" />
                 </div>
                 <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
-                  <span className="text-xl">🎨</span>
+                  <Palette className="text-white" size={20} aria-hidden="true" />
                 </div>
                 <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
-                  <span className="text-xl">✨</span>
+                  <Sparkles className="text-white" size={20} aria-hidden="true" />
                 </div>
               </div>
             </div>

@@ -15,7 +15,7 @@ const Contact = () => {
   });
   const [isLoading, setIsLoading] = useState(false);
 
-  // REPLACE THIS URL WITH YOUR GOOGLE APPS SCRIPT WEB APP URL
+  
   const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyzVVRIMA2RLh-SR7qJcw6HOjCq9Opim0ndoqYGV1M1TY3qWHWDfCCHaT5Q-Y3nih81/exec";
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -94,13 +94,7 @@ const Contact = () => {
       title: "Instagram",
       content: "@aailazahrabutt",
       link: "https://www.instagram.com/aailazahrabutt/",
-    },
-    {
-      icon: MapPin,
-      title: "Location",
-      content: "Available for commissions",
-      link: null,
-    },
+    }
   ];
 
   return (
