@@ -4,7 +4,7 @@ import heroArtwork from "@/assets/hero-artwork.jpeg";
 import quietPatch1 from "@/assets/assets2/A Quiet Patch (i).png";
 import studioVideo from "../../assets/Aaila 1.mp4";
 import ArtworkCard from "@/components/ArtworkCard";
-
+import studioPoster from "../../images/image12.jpeg";
 const ctaBackground = new URL("../../assets/background.jpeg", import.meta.url).href;
 
 const Home = () => {
@@ -94,6 +94,7 @@ const Home = () => {
                 <video
                   className="w-full aspect-[9/16] object-cover"
                   src={studioVideo}
+                  poster={studioPoster}
                   autoPlay
                   muted
                   loop
@@ -137,7 +138,7 @@ const Home = () => {
               
               <div className="mt-10">
                 <Link to="/thesis">
-                  <button className="px-10 py-4 rounded-full text-lg font-semibold text-white hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl" style={{ backgroundColor: '#287680' }}>
+                  <button className="px-10 py-4 rounded-full text-lg font-semibold text-white hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl" style={{ backgroundColor: '#4f7987' }}>
                     View Thesis Collection
                     <ArrowRight className="ml-3 inline-block group-hover:translate-x-1 transition-transform" size={20} />
                   </button>
