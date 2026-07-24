@@ -79,7 +79,7 @@ const Home = () => {
             <div className="fade-in-up">
               <div className="relative inline-block mb-8">
                 <h2 className="text-5xl sm:text-6xl font-heading font-bold artistic-text creative-text-shadow">
-                  In Motion
+                  Visuals
                 </h2>
                 <div className="absolute -bottom-2 left-0 w-28 h-1 bg-gradient-to-r from-arts-light-blue to-arts-pink rounded-full"></div>
               </div>
