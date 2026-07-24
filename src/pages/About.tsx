@@ -133,43 +133,7 @@ const About = () => {
           </div>
         </div>
 
-        {/* Materials Section */}
-        <div className="mt-24 fade-in-up">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="relative inline-block mb-12">
-              <h2 className="text-4xl sm:text-5xl font-heading font-bold mb-6 artistic-text creative-text-shadow">
-                Favorite Materials
-              </h2>
-              <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-arts-light-blue to-arts-green rounded-full"></div>
-            </div>
-            
-            <div className="creative-card p-12 relative">
-              <p className="font-body text-arts-dark-blue/80 leading-relaxed text-lg mb-8">
-                I work with a variety of mediums, each offering unique possibilities for
-                expression. My favorites include acrylic paints for their vibrant colors,
-                textiles for their tactile qualities, handmade papers for their organic
-                textures, and natural materials that bring an authentic, earthy element
-                to my work.
-              </p>
-              
-              {/* Creative material icons */}
-              <div className="flex justify-center items-center gap-8 flex-wrap">
-                <div className="w-16 h-16 bg-gradient-to-br from-arts-light-blue/20 to-arts-light-blue/40 rounded-full flex items-center justify-center">
-                  <Palette className="text-arts-light-blue" size={28} aria-hidden="true" />
-                </div>
-                <div className="w-16 h-16 bg-gradient-to-br from-arts-pink/20 to-arts-pink/40 rounded-full flex items-center justify-center">
-                  <Feather className="text-arts-pink" size={28} aria-hidden="true" />
-                </div>
-                <div className="w-16 h-16 bg-gradient-to-br from-arts-green/20 to-arts-green/40 rounded-full flex items-center justify-center">
-                  <FileText className="text-arts-green" size={28} aria-hidden="true" />
-                </div>
-                <div className="w-16 h-16 bg-gradient-to-br from-arts-light-blue/20 to-arts-pink/20 rounded-full flex items-center justify-center">
-                  <Leaf className="text-arts-dark-blue" size={28} aria-hidden="true" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        
       </div>
     </div>
   );
